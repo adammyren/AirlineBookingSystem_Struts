@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-mar-28 22:08:12 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Adminpassengerview" table="adminpassengerview" catalog="AirlineBookingSystem" optimistic-lock="version">
+        <composite-id name="id" class="entities.AdminpassengerviewId">
+            <key-property name="flightId" type="string">
+                <column name="flight_id" length="6" />
+            </key-property>
+            <key-property name="date" type="string">
+                <column name="date" length="11" />
+            </key-property>
+            <key-property name="passportNr" type="string">
+                <column name="passport_nr" length="11" />
+            </key-property>
+            <key-property name="firstname" type="string">
+                <column name="firstname" length="11" />
+            </key-property>
+            <key-property name="lastname" type="string">
+                <column name="lastname" length="11" />
+            </key-property>
+            <key-property name="passportExp" type="string">
+                <column name="passport_exp" length="11" />
+            </key-property>
+            <key-property name="passportIsh" type="string">
+                <column name="passport_ish" length="11" />
+            </key-property>
+            <key-property name="dateOfBirth" type="string">
+                <column name="date_of_birth" length="11" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

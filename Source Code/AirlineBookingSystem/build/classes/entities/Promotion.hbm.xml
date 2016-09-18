@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-apr-03 17:18:58 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Promotion" table="promotion" catalog="AirlineBookingSystem" optimistic-lock="version">
+        <composite-id name="id" class="entities.PromotionId">
+            <key-property name="originCity" type="string">
+                <column name="origin_city" length="20" />
+            </key-property>
+            <key-property name="originId" type="string">
+                <column name="origin_id" length="3" />
+            </key-property>
+            <key-property name="destinationId" type="string">
+                <column name="destination_id" length="3" />
+            </key-property>
+            <key-property name="destinationCity" type="string">
+                <column name="destination_city" length="20" />
+            </key-property>
+            <key-property name="price" type="string">
+                <column name="price" length="11" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

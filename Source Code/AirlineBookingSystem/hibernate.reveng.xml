@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="Airport"
+		match-catalog="AirlineBookingSystem" exclude="true">
+	</table-filter>
+	<table-filter match-name="Booking"
+		match-catalog="AirlineBookingSystem" exclude="true">
+	</table-filter>
+	<table-filter match-name="Passenger"
+		match-catalog="AirlineBookingSystem" exclude="true">
+	</table-filter>
+	<table-filter match-name="User" match-catalog="AirlineBookingSystem"
+		exclude="true">
+	</table-filter>
+	<table-filter match-name="mybookingselement"
+		match-catalog="AirlineBookingSystem" exclude="true">
+	</table-filter>
+	<table-filter match-name="adminpassengerview"
+		match-catalog="AirlineBookingSystem" exclude="true">
+	</table-filter>
+	<table-filter match-name="Flight"
+		match-catalog="AirlineBookingSystem" exclude="true">
+	</table-filter>
+	<table-filter match-name="promotion"
+		match-catalog="AirlineBookingSystem">
+	</table-filter>
+</hibernate-reverse-engineering>

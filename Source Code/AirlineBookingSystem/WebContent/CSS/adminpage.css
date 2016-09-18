@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+
+#report_box{
+	width:40vw;
+	margin:3vw;
+	top:20vh;
+}
+
+#manage_box {
+	width:40vw;
+	margin:3vw;
+	top:20vh;
+}
+
+#create_user_box{
+	width:40vw;
+	margin:3vw;
+}
+
+#add_promotion_box {
+	width:40vw;
+	margin:3vw;
+	top:20vh;
+}
+
+#current_promotions_box {
+	width:30vw;
+	margi:3vw;
+	top:20vh;
+	left:-15vw;
+}

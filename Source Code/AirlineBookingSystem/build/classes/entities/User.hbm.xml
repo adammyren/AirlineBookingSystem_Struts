@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-mar-22 19:24:15 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.User" table="User" catalog="AirlineBookingSystem" optimistic-lock="version">
+        <id name="username" type="string">
+            <column name="username" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="20" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="40" />
+        </property>
+        <property name="admin" type="string">
+            <column name="admin" length="11" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-apr-01 17:41:47 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Flight" table="Flight" catalog="AirlineBookingSystem" optimistic-lock="version">
+        <composite-id name="id" class="entities.FlightId">
+            <key-property name="flightId" type="string">
+                <column name="flight_id" length="6" />
+            </key-property>
+            <key-property name="date" type="string">
+                <column name="date" length="11" />
+            </key-property>
+        </composite-id>
+        <property name="departureTime" type="string">
+            <column name="departure_time" length="11" not-null="true" />
+        </property>
+        <property name="duration" type="string">
+            <column name="duration" length="11" />
+        </property>
+        <property name="capacity" type="int">
+            <column name="capacity" not-null="true" />
+        </property>
+        <property name="freeSeats" type="int">
+            <column name="free_seats" not-null="true" />
+        </property>
+        <property name="origin" type="string">
+            <column name="origin" length="3" not-null="true" />
+        </property>
+        <property name="destination" type="string">
+            <column name="destination" length="3" not-null="true" />
+        </property>
+        <property name="price" type="string">
+            <column name="price" length="11" />
+        </property>
+        <property name="promotion" type="string">
+            <column name="promotion" length="3" />
+        </property>
+    </class>
+</hibernate-mapping>

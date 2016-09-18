@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="authentication" class="interceptors.LoginInterceptor"></interceptor>
+			<interceptor-stack name="authStack">
+				<interceptor-ref name="authentication"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<global-results>
+			<result name="login" type="redirect">/displayLogin.action</result>
+		</global-results>
+
+		<action name="searchFlight" class="actions.searchFlightAction">
+			<result name="success">/JSP/SelectFlight.jsp</result>
+			<result name="input" type="redirect">displayStartPage</result>
+		</action>
+
+		<action name="selectFlight" class="actions.selectFlightAction">
+			<result name="success">/JSP/PutInformation.jsp</result>
+		</action>
+
+		<action name="index" class="actions.IndexAction">
+			<result name="not_logged_in" type="redirect">displayStartPage</result>
+		</action>
+
+		<action name="exitBooking" class="actions.ExitBookingAction">
+			<result name="not_logged_in" type="redirect">displayStartPage</result>
+			<result name="success">/JSP/MyPages.jsp</result>
+		</action>
+
+		<action name="logoutUser" class="actions.LogoutAction">
+			<result type="redirect">displayStartPage</result>
+		</action>
+
+		<action name="bookFlights" class="actions.BookFlightAction">
+			<result name="success" type="redirect">myPages</result>
+		</action>
+
+		<action name="displayLogin">
+			<result>/JSP/Login.jsp</result>
+		</action>
+
+		<action name="displayConfirm">
+			<interceptor-ref name="authStack"></interceptor-ref>
+			<result>/JSP/ConfirmBooking.jsp</result>
+		</action>
+
+		<action name="savePassengerInformation" class="actions.SavePassengerInformationAction">
+			<result name="success" type="redirect">displayConfirm</result>
+			<result name="input">/JSP/PutInformation.jsp</result>
+		</action>
+
+		<action name="loginUser" class="actions.LoginAction">
+			<result name="success" type="redirect">myPages</result>
+			<result name="in_booking" type="redirect">displayConfirm</result>
+			<result name="admin" type="redirect">admin/displayAdmin</result>
+			<result name="input">/JSP/Login.jsp</result>
+		</action>
+
+		<action name="registerUser" class="actions.RegisterUserAction">
+			<result name="success" type="redirect">myPages</result>
+			<result name="in_booking" type="redirect">displayConfirm</result>
+			<result name="input">/JSP/Login.jsp</result>
+		</action>
+
+		<action name="myPages" class="actions.PrepareMyPagesAction">
+			<interceptor-ref name="authStack"></interceptor-ref>
+			<result name="success">JSP/MyPages.jsp</result>
+		</action>
+
+		<action name="cancelBooking" class="actions.CancelBookingAction">
+			<result name="success" type="redirect">myPages</result>
+		</action>
+		
+		<action name="displayStartPage" class="actions.GetPromotionsAction">
+			<result name="success">/JSP/StartPage.jsp</result>
+		</action>
+
+	</package>
+	<package name="admin" extends="struts-default" namespace="/admin">
+		<interceptors>
+			<interceptor name="authentication" class="interceptors.LoginInterceptor"></interceptor>
+			<interceptor-stack name="authStack">
+				<interceptor-ref name="authentication"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<global-results>
+			<result name="login" type="redirect">/displayLogin.action</result>
+		</global-results>
+
+		<action name="getReport" class="actions.CreateReportAction">
+			<result name="success">/JSP/admin/ViewReport.jsp</result>
+		</action>
+		
+		<action name="setPromotion" class="actions.ChangePromotionAction">
+			<result name="success" type="redirect">displayAdmin</result>
+		</action>
+
+
+		<action name="displayAdmin" class="actions.GetPromotionsAction">
+			<interceptor-ref name="authStack"></interceptor-ref>
+			<result>/JSP/admin/AdminPage.jsp</result>
+		</action>
+
+		<action name="addFlight" class="actions.AddFlightAction">
+			<result name="success" type="redirect">displayAdmin</result>
+		</action>
+
+		<action name="downloadXML" class="actions.DownloadXMLAction">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="contentDisposition">attachment;filename="report.xml"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+	</package>
+
+
+
+
+</struts>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-mar-22 19:24:15 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Booking" table="Booking" catalog="AirlineBookingSystem" optimistic-lock="version">
+        <composite-id name="id" class="entities.BookingId">
+            <key-property name="flightId" type="string">
+                <column name="flight_id" length="6" />
+            </key-property>
+            <key-property name="passenger" type="string">
+                <column name="passenger" length="11" />
+            </key-property>
+            <key-property name="date" type="string">
+                <column name="date" length="11" />
+            </key-property>
+        </composite-id>
+        <property name="user" type="string">
+            <column name="user" length="11" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="11" />
+        </property>
+    </class>
+</hibernate-mapping>

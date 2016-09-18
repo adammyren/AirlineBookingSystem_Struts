@@ -1,0 +1,391 @@
+@CHARSET "UTF-8";
+
+*{
+	font-family:Verdana;
+}
+	
+p, h1, h2, h3 {
+	margin:0px;
+	padding:0px;
+}
+
+
+h2 {
+	font-size:3vh;
+	height:5vh;
+	top:1vh;
+	position: relative;
+	color: white;
+	width: auto;
+	margin:3vh;
+	text-align: center;
+}
+
+
+html, body {
+	margin: 0px;
+	padding:0px;
+	background: black;
+	padding-bottom:20vh;
+}
+
+#content {
+	text-align:center;
+}
+
+#header {
+	position:fixed;
+	width:100vw;
+	height:7vh;
+	background-color: #004C70;
+	z-index:2;
+}
+
+#header_logo {
+	position:relative;
+	display:inline-block;
+	width:5vh;
+	height:5vh;
+	top:1vh;
+	left:1vh;
+}
+
+#header_text {
+	position:relative;
+	left: 1vw;
+	top:-0.4vh;
+	margin:0px;
+	padding:0px;
+	color:white;
+	font-size: 2.5vh;
+	display:inline-block;
+}
+
+#background_image{
+	margin-top: 0px;
+	width: 100vw;
+	height: 80vh;
+	position: fixed;
+	opacity: 0.9;
+}
+
+#the_circle {
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	border-radius: 100%;
+	width: 60vw;
+	height: 60vw;
+	margin-left:20vw;
+}
+
+.user_image {
+	position: relative;
+	background: white;
+	border-radius: 100%;
+	z-index: 1;
+	width: 17vh;
+	height: 17vh;
+	top: 15vh;
+	padding: 3vh;
+}
+
+
+.box {
+	position: relative;
+	background-color: rgba(0, 147, 209, 0.9);
+	border-radius: 5px;
+	z-index: 1;
+	text-align:center;
+	padding-bottom:4vh;
+}
+
+.booking_box {
+	padding:0vh;
+}
+
+.promotion_box {
+	position: relative;
+	top:5vh;
+	width:25vw;
+	display:inline-block;
+	padding-bottom:2vh;
+	margin:2vw;
+	background-color: rgba(224, 160, 37, 0.9);
+	border-radius: 3px;
+	z-index: 1;
+	text-align:center;
+	overflow:hidden;
+}
+
+.promotion_image {
+	position: relative;
+	top:2vh;
+	z-index: 1;
+	width: 18vw;
+	height: 20vh;
+	margin-bottom: 2vh;
+}
+
+.promotion_heading {
+	font-size:3vh;
+	position:relative;
+	padding:1vh;
+	color: white;
+	width: auto;
+	text-align: center;
+}
+
+#promotion_container {
+	position:relative;
+	background-color: black;
+	top:31vh;
+}
+
+
+#searchbox {
+	width: 90vw;
+	left:5vw;
+	top: 25vh;
+	padding-top:3vh;
+	padding-bottom:3vh;
+	padding-left:1vw;
+	padding-right:1vw;
+}
+
+#login_logout_button {
+	width: 12vw;
+	height: 5vh;
+	top: 16vh;
+	font-size: 2vh;
+	z-index: 1;	
+}
+
+.delete_button{
+	position:relative;
+	background-color: rgba(242, 99, 95, 0.9);
+	border: 1px solid white;
+	border-radius: 4px;
+	height: 5vh;
+	width: 5vw;
+	cursor: pointer;
+	outline: none;
+	color: white;
+	margin:2vh;
+	float:right;
+}
+
+.delete_button:HOVER{
+	background-color: rgba(170, 31, 39, 0.9);
+}
+
+.input_field {
+	background-color:white;
+	display:inline-block;
+	height: 5vh;
+	width:14.6vw;
+	line-height: 5vh;
+	font-size: 2vh;
+	margin:0.5vh;
+	margin-top:1vh;
+	padding:0.2vh;
+}
+.small_input_field {
+	background-color:white;
+	display:inline-block;
+	width:6.5vw;
+	height: 5vh;
+	line-height: 5vh;
+	font-size: 2vh;
+	margin:0.5vh;
+	margin-top:1vh;
+	padding:0.2vh;
+}
+.medium_input_field {
+	background-color:white;
+	display:inline-block;
+	width:11vw;
+	height: 5vh;
+	line-height: 5vh;
+	font-size: 2vh;
+	margin:0.5vh;
+	margin-top:1vh;
+	padding:0.2vh;
+}
+
+.input_field:disabled {
+	opacity:0.3;
+}
+
+.mybuttons, button {
+	position:relative;
+	background-color: rgba(0, 76, 112, 0.4);
+	border: 2px solid white;
+	border-radius: 4px;
+	height: 5.2vh;
+	width: 8vw;
+	cursor: pointer;
+	outline: none;
+	color: white;
+	margin:2vh;
+}
+
+.next_button {
+	left:10vw;
+	top:6.1vh;
+	
+}
+
+.cancel_booking_button {
+	left:-10vw;
+	top:-3vh;
+}
+
+.mybuttons:HOVER, button:HOVER {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.box_heading{
+	font-size:4vh;
+	top:1.5vh;
+	position: relative;
+	color: white;
+	padding:2vh;
+	width: auto;
+	text-align: center;
+}
+
+.errorMessage {
+	color:#F2635F;
+	text-align:center;
+	padding-left: 1.2em;
+}
+
+li,ul,span {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+
+.radio {
+	color:white;
+	margin:0.5vh;
+	margin-top:2vh;
+}
+
+.list_element {
+	position: relative;
+	margin-left: 1vh;
+	margin-right: 1vh;
+	width: auto;
+	margin-top: 1vh;
+	background: white;
+	border-radius: 5px;
+	height:10vh;
+	display: flex;
+  	align-items: center;
+}
+
+.list_element_left {
+	display:inline-block;
+	height:100%;
+	width:auto;
+	min-width:8vw;
+	border-right-color: rgba(2, 136, 209, 1);
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	float:left;
+}
+
+.list_element_right {
+	background-color:blue;
+	display:inline-block;
+	height:100%;
+	float:right;
+}
+
+p {
+	background-color:rgba( 2, 136, 209, 0.0);
+	color: white;
+	outline: none;
+	cursor: pointer;
+	text-decoration: underline;
+	font-size:2vh;
+}
+
+/*--------------------------------------------------- ADMIN ---------------------------------------------------*/
+
+.admin_list_element {
+	position: relative;
+	margin-left: 1vh;
+	margin-right: 1vh;
+	width: 55vw;;
+	margin-top: 1vh;
+	background: white;
+	height: 10vh;
+	border-radius: 2px;
+	display: flex;
+  	align-items: center;
+	
+}
+
+.admin_box_heading{
+	font-size:3vh;
+	top:1.5vh;
+	position: relative;
+	color: white;
+	padding:2vh;
+	width: auto;
+	text-align: center;
+}
+
+.admin_mybuttons {
+	position:relative;
+	background-color: rgba(73, 73, 73, 0.4);
+	border: 2px solid white;
+	border-radius: 2px;
+	height: 4vh;
+	cursor: pointer;
+	outline: none;
+	color: white;
+	margin:2vh;
+	display:inline-block;
+}
+
+.admin_mybuttons:HOVER {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.admin_input_field:disabled {
+	opacity:0.3;
+}
+.admin_input_field {
+	background-color:white;
+	display:inline-block;
+	height: 4vh;
+	width:13vw;
+	line-height:4vh;
+	margin:0.5vh;
+	margin-top:1vh;
+	padding:0.2vh;
+}
+.admin_small_input_field {
+	background-color:white;
+	display:inline-block;
+	width:6.5vw;
+	height: 5vh;
+	margin:0.5vh;
+	margin-top:1vh;
+	padding:0.2vh;
+}
+
+.admin_box {
+	position: relative;
+	background-color: rgba(73, 73, 73, 0.9);
+	display:inline-table;
+	border-radius: 2px;
+	z-index: 1;
+	text-align:center;
+	padding-bottom:2vh;
+}

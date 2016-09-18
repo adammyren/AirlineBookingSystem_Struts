@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-mar-28 14:16:35 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Mybookingselement" table="mybookingselement" catalog="AirlineBookingSystem" optimistic-lock="version">
+        <composite-id name="id" class="entities.MybookingselementId">
+            <key-property name="flightId" type="string">
+                <column name="flight_id" length="6" />
+            </key-property>
+            <key-property name="date" type="string">
+                <column name="date" length="11" />
+            </key-property>
+            <key-property name="departureTime" type="string">
+                <column name="departure_time" length="11" />
+            </key-property>
+            <key-property name="duration" type="string">
+                <column name="duration" length="11" />
+            </key-property>
+            <key-property name="origin" type="string">
+                <column name="origin" length="3" />
+            </key-property>
+            <key-property name="destination" type="string">
+                <column name="destination" length="3" />
+            </key-property>
+            <key-property name="firstname" type="string">
+                <column name="firstname" length="11" />
+            </key-property>
+            <key-property name="lastname" type="string">
+                <column name="lastname" length="11" />
+            </key-property>
+            <key-property name="passportNr" type="string">
+                <column name="passport_nr" length="11" />
+            </key-property>
+            <key-property name="user" type="string">
+                <column name="user" length="11" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-mar-22 19:24:15 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="entities.Passenger" table="Passenger" catalog="AirlineBookingSystem" optimistic-lock="version">
+        <id name="passportNr" type="string">
+            <column name="passport_nr" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="firstname" type="string">
+            <column name="firstname" length="11" not-null="true" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="11" not-null="true" />
+        </property>
+        <property name="passportExp" type="string">
+            <column name="passport_exp" length="11" />
+        </property>
+        <property name="passportIsh" type="string">
+            <column name="passport_ish" length="11" />
+        </property>
+        <property name="dateOfBirth" type="string">
+            <column name="date_of_birth" length="11" />
+        </property>
+    </class>
+</hibernate-mapping>

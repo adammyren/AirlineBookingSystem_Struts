@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+#bookings_display {
+	top:10vh;
+	left:20vw;
+	width:60vw;
+}
+
+#payment_box {
+	width:30vw;
+	height:43vh;
+	left:35vw;
+	top:20vh;
+}
